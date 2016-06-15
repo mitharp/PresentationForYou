@@ -1,23 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using PresentationForYou.WEB.Models;
+using PresentationForYou.BLL.DTO;
+using PresentationForYou.BLL.Interfaces;
 
 namespace PresentationForYou.WEB.Controllers
 {
     public class BoardsController : Controller
     {
-        private PresentationForYouWEBContext db = new PresentationForYouWEBContext();
+        IService<BoardDTO> boardService;
+        IEnumerable<Board> Boards;
 
+        public BoardsController(IService<BoardDTO> boardService)
+        {
+            this.boardService = boardService;
+            IEnumerable<BoardDTO> board = boardService.GetAll();
+            Boards = board.Select(a => new Board
+            {
+                Id = a.Id,
+                Height = a.Height,
+                Name = a.Name,
+                Type = a.Type,
+                Width = a.Width
+            }).ToList();
+        }
         // GET: Boards
         public ActionResult Index()
         {
-            return View(db.Boards.ToList());
+            return View(Boards);
         }
 
         // GET: Boards/Details/5
@@ -27,12 +40,19 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Board board = db.Boards.Find(id);
-            if (board == null)
+            var boardDTO = boardService.Get(id);
+            if (boardDTO == null)
             {
                 return HttpNotFound();
             }
-            return View(board);
+            return View(new Board
+            {
+                Id = boardDTO.Id,
+                Height = boardDTO.Height,
+                Name = boardDTO.Name,
+                Type = boardDTO.Type,
+                Width = boardDTO.Width
+            });
         }
 
         // GET: Boards/Create
@@ -50,8 +70,14 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Boards.Add(board);
-                db.SaveChanges();
+                boardService.Add(new BoardDTO
+                {
+                    Id = board.Id,
+                    Height = board.Height,
+                    Name = board.Name,
+                    Type = board.Type,
+                    Width = board.Width
+                });
                 return RedirectToAction("Index");
             }
 
@@ -65,7 +91,15 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Board board = db.Boards.Find(id);
+            var boardDTO = boardService.Get(id);
+            Board board = new Models.Board
+            {
+                Id = boardDTO.Id,
+                Height = boardDTO.Height,
+                Name = boardDTO.Name,
+                Type = boardDTO.Type,
+                Width = boardDTO.Width
+            };
             if (board == null)
             {
                 return HttpNotFound();
@@ -82,8 +116,14 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(board).State = EntityState.Modified;
-                db.SaveChanges();
+                boardService.Edit(new BoardDTO
+                {
+                    Id = board.Id,
+                    Height = board.Height,
+                    Name = board.Name,
+                    Type = board.Type,
+                    Width = board.Width
+                });
                 return RedirectToAction("Index");
             }
             return View(board);
@@ -96,12 +136,20 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Board board = db.Boards.Find(id);
-            if (board == null)
+            BoardDTO boardDTO = boardService.Get(id);
+            Board board = new Board()
+            {
+                Id = boardDTO.Id,
+                Height = boardDTO.Height,
+                Name = boardDTO.Name,
+                Type = boardDTO.Type,
+                Width = boardDTO.Width
+            };
+            if (boardDTO == null)
             {
                 return HttpNotFound();
             }
-            return View(board);
+            return View(boardDTO);
         }
 
         // POST: Boards/Delete/5
@@ -109,9 +157,7 @@ namespace PresentationForYou.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Board board = db.Boards.Find(id);
-            db.Boards.Remove(board);
-            db.SaveChanges();
+            boardService.Remove(id);
             return RedirectToAction("Index");
         }
 
@@ -119,7 +165,7 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                boardService.Dispose();
             }
             base.Dispose(disposing);
         }

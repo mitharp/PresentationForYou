@@ -1,6 +1,4 @@
-﻿using PresentationForYou.BLL.DTO;
-using PresentationForYou.BLL.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace PresentationForYou.BLL.Interfaces
 {

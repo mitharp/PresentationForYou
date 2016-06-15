@@ -12,13 +12,7 @@ namespace PresentationForYou.DAL.EF
         public DbSet<Request> Requests { get; set; }
         public DbSet<User> Users { get; set; }
 
-
-        public PresentationForYouContext()
-        {
-
-        }
-        public PresentationForYouContext(string connectionString) : base(connectionString)
-        {
-        }
+        public PresentationForYouContext() { }
+        public PresentationForYouContext(string connectionString) : base(connectionString) { }
     }
 }

@@ -3,6 +3,7 @@ using PresentationForYou.DAL.Entities;
 using PresentationForYou.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Data.Entity;
 using System.Linq;
 
@@ -35,7 +36,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public void Update(Auditory item)
         {
-            db.Entry(item).State = EntityState.Modified;
+            db.Auditories.AddOrUpdate(item);
         }
     }
 }

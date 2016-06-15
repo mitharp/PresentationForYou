@@ -14,9 +14,9 @@ namespace PresentationForYou.BLL.Services
         {
             Database = uow;
         }
-        public void Add(UserDTO source)
+        public void Add(UserDTO user)
         {
-            Database.Users.Create(new User { Name = source.Name, Description = source.Description });
+            Database.Users.Create(new User { Id = user.Id });
             Database.Save();
         }
         public void Dispose()

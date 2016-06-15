@@ -3,7 +3,7 @@ using PresentationForYou.DAL.Entities;
 using PresentationForYou.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 
 namespace PresentationForYou.DAL.Repositories
@@ -35,7 +35,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public void Update(User item)
         {
-            db.Entry(item).State = EntityState.Modified;
+            db.Users.AddOrUpdate(item);
         }
     }
 }

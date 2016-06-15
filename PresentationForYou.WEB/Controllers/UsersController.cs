@@ -93,7 +93,7 @@ namespace PresentationForYou.WEB.Controllers
                 roles.Add(new SelectListItem { Text = "Administrator", Value = "Administrator" });
                 roles.Add(new SelectListItem { Text = "Manager", Value = "Manager" });
                 roles.Add(new SelectListItem { Text = "User", Value = "User", Selected = true });
-                ViewBag.roles = roles;x
+                ViewBag.roles = roles;
                 return RedirectToAction("Index");
             }
 

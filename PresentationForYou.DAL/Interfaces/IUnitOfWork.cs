@@ -5,9 +5,13 @@ namespace PresentationForYou.DAL.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<Account> Accounts { get; }
-        IRepository<Source> Sources { get; }
-        IRepository<Transaction> Transactions { get; }
+        IRepository<Auditory> Auditories { get; }
+        IRepository<Board> Boards { get; }
+        IRepository<Log> Logs { get; }
+        IRepository<Projector> Projectors { get; }
+        IRepository<Request> Requests { get; }
+        IRepository<User> Users { get; }
+
         void Save();
     }
 }

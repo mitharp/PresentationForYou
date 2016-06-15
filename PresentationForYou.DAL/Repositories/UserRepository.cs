@@ -3,13 +3,12 @@ using PresentationForYou.DAL.Entities;
 using PresentationForYou.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PresentationForYou.DAL.Repositories
 {
-    class UserRepository : IRepository<User>
+    public class UserRepository : IRepository<User>
     {
         private PresentationForYouContext db;
 

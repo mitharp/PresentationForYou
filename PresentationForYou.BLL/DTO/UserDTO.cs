@@ -11,6 +11,6 @@ namespace PresentationForYou.BLL.DTO
         public DateTime BirthDay { get; set; }
         public DateTime RegistrationDateTime { get; set; }
         public string Phone { get; set; }
-        public string Email { get; set; }        
+        public string Email { get; set; }
     }
 }

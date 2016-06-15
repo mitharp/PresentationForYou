@@ -29,7 +29,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public IEnumerable<Projector> Find(Func<Projector, bool> predicate) => db.Projectors.Where(predicate).ToList();
 
-        public IEnumerable<Projector> Get(int id) => Find(a => a.Id == id);
+        public Projector Get(int id) => Find(a => a.Id == id).FirstOrDefault();
 
         public IEnumerable<Projector> GetAll() => db.Projectors;
 

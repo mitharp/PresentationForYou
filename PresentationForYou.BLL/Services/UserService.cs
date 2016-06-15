@@ -10,42 +10,76 @@ namespace PresentationForYou.BLL.Services
     public class UserService : IService<UserDTO>
     {
         IUnitOfWork Database { get; set; }
+
         public UserService(IUnitOfWork uow)
         {
             Database = uow;
         }
+
         public void Add(UserDTO user)
         {
-            Database.Users.Create(new User { Id = user.Id });
+            Database.Users.Create(new User
+            {
+                Id = user.Id,
+                BirthDay = user.BirthDay,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Phone = user.Phone,
+                RegistrationDateTime = user.RegistrationDateTime,
+                Role = user.Role
+            });
             Database.Save();
         }
-        public void Dispose()
+
+        public void Dispose() { }
+
+        public void Edit(UserDTO user)
         {
-            //
-        }
-        public void Edit(UserDTO source)
-        {
-            Database.Users.Update(new User { Id = source.Id, Name = source.Name, Description = source.Description });
+            Database.Users.Update(new User
+            {
+                Id = user.Id,
+                BirthDay = user.BirthDay,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Phone = user.Phone,
+                RegistrationDateTime = user.RegistrationDateTime,
+                Role = user.Role
+            });
             Database.Save();
         }
+
         public void Remove(int id)
         {
             Database.Users.Delete(id);
             Database.Save();
         }
+
         public UserDTO Get(int? id)
         {
             if (id == null)
-                throw new Exception("Не установлено id телефона");
-            var source = Database.Users.Get(id.Value);
-            if (source == null)
-                throw new Exception("Телефон не найден");
-            return new UserDTO { Id = source.Id }
+                throw new Exception("ERROR");
+            var user = Database.Users.Get(id.Value);
+            if (user == null)
+                throw new Exception("ERROR");
+
+            return new UserDTO
+            {
+                Id = user.Id,
+                BirthDay = user.BirthDay,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Phone = user.Phone,
+                RegistrationDateTime = user.RegistrationDateTime,
+                Role = user.Role
+            };
         }
+
         public IEnumerable<UserDTO> GetAll()
         {
-            Mapper.Initialize(item => item.CreateMap<User, UserDTO>());
-            return Mapper.Map<IEnumerable<User>, List<UserDTO>>(Database.Users.GetAll());
+
         }
     }
 }

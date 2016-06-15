@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresentationForYou.DAL.Entities;
+using System;
 
 namespace PresentationForYou.BLL.DTO
 {
@@ -12,8 +13,5 @@ namespace PresentationForYou.BLL.DTO
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
-        public virtual Auditory Auditory { get; set; }
-        public virtual Projector Projector { get; set; }
-        public virtual Board Board { get; set; }
     }
 }

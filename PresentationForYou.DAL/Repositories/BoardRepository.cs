@@ -29,7 +29,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public IEnumerable<Board> Find(Func<Board, bool> predicate) => db.Boards.Where(predicate).ToList();
 
-        public IEnumerable<Board> Get(int id) => Find(a => a.Id == id);
+        public Board Get(int id) => Find(a => a.Id == id).FirstOrDefault();
 
         public IEnumerable<Board> GetAll() => db.Boards;
 

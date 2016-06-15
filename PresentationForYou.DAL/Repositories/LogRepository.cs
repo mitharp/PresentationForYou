@@ -29,7 +29,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public IEnumerable<Log> Find(Func<Log, bool> predicate) => db.Logs.Where(predicate).ToList();
 
-        public IEnumerable<Log> Get(int id) => Find(a => a.Id == id);
+        public Log Get(int id) => Find(a => a.Id == id).FirstOrDefault();
 
         public IEnumerable<Log> GetAll() => db.Logs;
 

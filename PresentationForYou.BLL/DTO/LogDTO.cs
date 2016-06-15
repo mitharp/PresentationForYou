@@ -2,7 +2,7 @@
 
 namespace PresentationForYou.BLL.DTO
 {
-    class Log
+    public class LogDTO
     {
         public int Id { get; set; }
         public DateTime BeginningDatetime { get; set; }

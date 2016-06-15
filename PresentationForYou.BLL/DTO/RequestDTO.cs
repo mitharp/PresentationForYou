@@ -2,7 +2,7 @@
 
 namespace PresentationForYou.BLL.DTO
 {
-    class Request
+    public class RequestDTO
     {
         public int Id { get; set; }
         public DateTime BeginningDatetime { get; set; }

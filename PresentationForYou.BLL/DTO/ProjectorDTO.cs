@@ -1,6 +1,6 @@
 ﻿namespace PresentationForYou.BLL.DTO
 {
-    class Projector
+    public class ProjectorDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

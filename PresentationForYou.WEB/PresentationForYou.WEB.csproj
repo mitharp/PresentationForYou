@@ -145,7 +145,9 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuditoriesController.cs" />
+    <Compile Include="Controllers\BoardsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectorsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,6 +223,16 @@
     <Content Include="Views\Auditories\Details.cshtml" />
     <Content Include="Views\Auditories\Edit.cshtml" />
     <Content Include="Views\Auditories\Index.cshtml" />
+    <Content Include="Views\Boards\Create.cshtml" />
+    <Content Include="Views\Boards\Delete.cshtml" />
+    <Content Include="Views\Boards\Details.cshtml" />
+    <Content Include="Views\Boards\Edit.cshtml" />
+    <Content Include="Views\Boards\Index.cshtml" />
+    <Content Include="Views\Projectors\Create.cshtml" />
+    <Content Include="Views\Projectors\Delete.cshtml" />
+    <Content Include="Views\Projectors\Details.cshtml" />
+    <Content Include="Views\Projectors\Edit.cshtml" />
+    <Content Include="Views\Projectors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

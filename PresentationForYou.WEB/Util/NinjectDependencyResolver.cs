@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Ninject;
-using BudgetApp.BLL.Interfaces;
-using BudgetApp.BLL.Services;
-using BudgetApp.BLL.DTO;
+using PresentationForYou.BLL.Interfaces;
+using PresentationForYou.BLL.Services;
+using PresentationForYou.BLL.DTO;
 
-namespace BudgetApp.WEB.Util
+namespace PresentationForYou.WEB.Util
 {
     public class NinjectDependencyResolver : IDependencyResolver
     {
@@ -26,8 +26,7 @@ namespace BudgetApp.WEB.Util
         }
         private void AddBindings()
         {
-            kernel.Bind<IService<UserDTO>>().To<SourceService>();
-            kernel.Bind<IService<TransactionDTO>>().To<TransactionService>();
+            kernel.Bind<IService<UserDTO>>().To<UserService>();
         }
     }
 }

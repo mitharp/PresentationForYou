@@ -10,6 +10,8 @@ namespace PresentationForYou.WEB.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Modules;
+    using BLL.Infrastructure;
 
     public static class NinjectWebCommon 
     {
@@ -39,6 +41,8 @@ namespace PresentationForYou.WEB.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
+            // устанавливаем строку подключения
+            var modules = new INinjectModule[] { new ServiceModule("BudgetContext") };
             var kernel = new StandardKernel();
             try
             {

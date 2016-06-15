@@ -4,12 +4,12 @@ namespace PresentationForYou.DAL.Entities
 {
     class Log
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public DateTime BeginningDatetime { get; set; }
         public DateTime EndDatetime { get; set; }
-        public int ResourceID { get; set; }
+        public int ResourceId { get; set; }
         public string ResourceType { get; set; }
-        public int UserID { get; set; }
+        public int UserId { get; set; }
 
         public virtual User User { get; set; }
         public virtual Auditory Auditory { get; set; }

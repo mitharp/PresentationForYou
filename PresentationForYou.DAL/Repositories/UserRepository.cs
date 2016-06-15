@@ -25,7 +25,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public void Delete(int id)
         {
-            db.Users.Remove(Find(a => a.ID == id)?.FirstOrDefault());
+            db.Users.Remove(Find(a => a.Id == id)?.FirstOrDefault());
         }
 
         public IEnumerable<User> Find(Func<User, bool> predicate) => db.Users.Where(predicate).ToList();

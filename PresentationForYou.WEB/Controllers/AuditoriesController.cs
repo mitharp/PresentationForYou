@@ -1,23 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using PresentationForYou.WEB.Models;
+using PresentationForYou.BLL.DTO;
+using PresentationForYou.BLL.Interfaces;
 
 namespace PresentationForYou.WEB.Controllers
 {
     public class AuditoriesController : Controller
     {
-        private PresentationForYouWEBContext db = new PresentationForYouWEBContext();
-
+        IService<AuditoryDTO> auditoryService;
+        IEnumerable<Auditory> Auditories;
+        public AuditoriesController(IService<AuditoryDTO> auditoryService)
+        {
+            this.auditoryService = auditoryService;
+            IEnumerable<AuditoryDTO> auditory = auditoryService.GetAll();
+            Auditories = auditory.Select(a => new Auditory
+            {
+                Id = a.Id,
+                Address = a.Address,
+                Capacity = a.Capacity,
+                Description = a.Description,
+                Name = a.Name
+            }).ToList();
+        }
         // GET: Auditories
         public ActionResult Index()
         {
-            return View(db.Auditories.ToList());
+            return View(Auditories);
         }
 
         // GET: Auditories/Details/5
@@ -27,12 +42,19 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Auditory auditory = db.Auditories.Find(id);
-            if (auditory == null)
+            var auditoryDTO = auditoryService.Get(id);
+            if (auditoryDTO == null)
             {
                 return HttpNotFound();
             }
-            return View(auditory);
+            return View(new Auditory
+            {
+                Id = auditoryDTO.Id,
+                Address = auditoryDTO.Address,
+                Capacity = auditoryDTO.Capacity,
+                Description = auditoryDTO.Description,
+                Name = auditoryDTO.Name
+            });
         }
 
         // GET: Auditories/Create
@@ -50,8 +72,14 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Auditories.Add(auditory);
-                db.SaveChanges();
+                auditoryService.Add(new AuditoryDTO
+                {
+                    Id = auditory.Id,
+                    Address = auditory.Address,
+                    Capacity = auditory.Capacity,
+                    Description = auditory.Description,
+                    Name = auditory.Name
+                });
                 return RedirectToAction("Index");
             }
 
@@ -65,7 +93,15 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Auditory auditory = db.Auditories.Find(id);
+            var auditoryDTO = auditoryService.Get(id);
+            Auditory auditory = new Auditory
+            {
+                Id = auditoryDTO.Id,
+                Address = auditoryDTO.Address,
+                Capacity = auditoryDTO.Capacity,
+                Description = auditoryDTO.Description,
+                Name = auditoryDTO.Name
+            };
             if (auditory == null)
             {
                 return HttpNotFound();
@@ -82,8 +118,14 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(auditory).State = EntityState.Modified;
-                db.SaveChanges();
+                auditoryService.Edit(new AuditoryDTO
+                {
+                    Id = auditory.Id,
+                    Address = auditory.Address,
+                    Capacity = auditory.Capacity,
+                    Description = auditory.Description,
+                    Name = auditory.Name
+                });
                 return RedirectToAction("Index");
             }
             return View(auditory);
@@ -96,7 +138,15 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Auditory auditory = db.Auditories.Find(id);
+            AuditoryDTO auditoryDTO = auditoryService.Get(id);
+            Auditory auditory = new Auditory
+            {
+                Id = auditoryDTO.Id,
+                Address = auditoryDTO.Address,
+                Capacity = auditoryDTO.Capacity,
+                Description = auditoryDTO.Description,
+                Name = auditoryDTO.Name
+            };
             if (auditory == null)
             {
                 return HttpNotFound();
@@ -109,9 +159,7 @@ namespace PresentationForYou.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Auditory auditory = db.Auditories.Find(id);
-            db.Auditories.Remove(auditory);
-            db.SaveChanges();
+            auditoryService.Remove(id);
             return RedirectToAction("Index");
         }
 
@@ -119,7 +167,7 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                auditoryService.Dispose();
             }
             base.Dispose(disposing);
         }

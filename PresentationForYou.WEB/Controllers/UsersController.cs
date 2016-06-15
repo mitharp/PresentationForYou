@@ -105,7 +105,7 @@ namespace PresentationForYou.WEB.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var userDTO = userService.Get(id);
-            User user = new Models.User
+            User user = new User
             {
                 Id = userDTO.Id,
                 BirthDay = userDTO.BirthDay,

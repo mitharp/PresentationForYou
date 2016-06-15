@@ -42,7 +42,7 @@ namespace BudgetApp.BLL.Services
                 throw new Exception("Телефон не найден");
             Mapper.Initialize(item => item.CreateMap<Source, SourceDTO>());
             return Mapper.Map<IEnumerable<Source>, List<SourceDTO>>(source)[0];
-            return new SourceDTO { Id}
+            return new SourceDTO { Id = source}
         }
         public IEnumerable<SourceDTO> GetAll()
         {

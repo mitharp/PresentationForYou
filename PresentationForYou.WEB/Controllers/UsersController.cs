@@ -89,6 +89,11 @@ namespace PresentationForYou.WEB.Controllers
                     RegistrationDateTime = user.RegistrationDateTime,
                     Role = user.Role
                 });
+                List<SelectListItem> roles = new List<SelectListItem>();
+                roles.Add(new SelectListItem { Text = "Administrator", Value = "Administrator" });
+                roles.Add(new SelectListItem { Text = "Manager", Value = "Manager" });
+                roles.Add(new SelectListItem { Text = "User", Value = "User", Selected = true });
+                ViewBag.roles = roles;x
                 return RedirectToAction("Index");
             }
 
@@ -114,6 +119,11 @@ namespace PresentationForYou.WEB.Controllers
                 RegistrationDateTime = userDTO.RegistrationDateTime,
                 Role = userDTO.Role
             };
+            List<SelectListItem> roles = new List<SelectListItem>();
+            roles.Add(new SelectListItem { Text = "Administrator", Value = "Administrator" });
+            roles.Add(new SelectListItem { Text = "Manager", Value = "Manager" });
+            roles.Add(new SelectListItem { Text = "User", Value = "User", Selected = true });
+            ViewBag.roles = roles;
             if (user == null)
             {
                 return HttpNotFound();
@@ -185,7 +195,7 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (disposing)
             {
-               userService.Dispose();
+                userService.Dispose();
             }
             base.Dispose(disposing);
         }

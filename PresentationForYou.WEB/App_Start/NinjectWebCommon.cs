@@ -43,7 +43,7 @@ namespace PresentationForYou.WEB.App_Start
         {
             // устанавливаем строку подключения
             var modules = new INinjectModule[] { new ServiceModule("PresentationForYouContext") };
-            var kernel = new StandardKernel();
+            var kernel = new StandardKernel(modules);
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);

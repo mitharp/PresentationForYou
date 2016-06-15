@@ -54,7 +54,6 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserService.cs" />
-    <Compile Include="Services\TransactionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PresentationForYou.DAL\PresentationForYou.DAL.csproj">

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PresentationForYou.DAL.Entities
+namespace PresentationForYou.BLL.DTO
 {
     class User
     {

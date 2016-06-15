@@ -1,4 +1,4 @@
-﻿namespace PresentationForYou.DAL.Entities
+﻿namespace PresentationForYou.BLL.DTO
 {
     class Projector
     {

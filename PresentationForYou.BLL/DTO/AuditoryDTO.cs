@@ -1,5 +1,4 @@
-﻿namespace PresentationForYou.DAL.Entities
-{
+﻿namespace PresentationForYou.BLL.DTO
     class Auditory
     {
         public int Id { get; set; }

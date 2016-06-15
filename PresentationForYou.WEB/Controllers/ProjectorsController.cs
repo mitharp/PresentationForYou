@@ -1,23 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using PresentationForYou.WEB.Models;
+using PresentationForYou.BLL.DTO;
+using PresentationForYou.BLL.Interfaces;
 
 namespace PresentationForYou.WEB.Controllers
 {
     public class ProjectorsController : Controller
     {
-        private PresentationForYouWEBContext db = new PresentationForYouWEBContext();
+        IService<ProjectorDTO> projectorService;
+        IEnumerable<Projector> Projectors;
 
+        public ProjectorsController(IService<ProjectorDTO> projectorService)
+        {
+            this.projectorService = projectorService;
+            IEnumerable<ProjectorDTO> projector = projectorService.GetAll();
+            Projectors = projector.Select(a => new Projector
+            {
+                Id = a.Id,
+                Name = a.Name,
+                Resolution = a.Resolution,
+                Type = a.Type
+            }).ToList();
+        }
         // GET: Projectors
         public ActionResult Index()
         {
-            return View(db.Projectors.ToList());
+            return View(Projectors);
         }
 
         // GET: Projectors/Details/5
@@ -27,12 +39,18 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Projector projector = db.Projectors.Find(id);
-            if (projector == null)
+            var projectorDTO = projectorService.Get(id);
+            if (projectorDTO == null)
             {
                 return HttpNotFound();
             }
-            return View(projector);
+            return View(new Projector
+            {
+                Id = projectorDTO.Id,
+                Name = projectorDTO.Name,
+                Resolution = projectorDTO.Resolution,
+                Type = projectorDTO.Type
+            });
         }
 
         // GET: Projectors/Create
@@ -50,8 +68,13 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Projectors.Add(projector);
-                db.SaveChanges();
+                projectorService.Add(new ProjectorDTO
+                {
+                    Id = projector.Id,
+                    Name = projector.Name,
+                    Resolution = projector.Resolution,
+                    Type = projector.Type,
+                });
                 return RedirectToAction("Index");
             }
 
@@ -65,7 +88,14 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Projector projector = db.Projectors.Find(id);
+            var projectorDTO = projectorService.Get(id);
+            Projector projector = new Models.Projector
+            {
+                Id = projectorDTO.Id,
+                Name = projectorDTO.Name,
+                Resolution = projectorDTO.Resolution,
+                Type = projectorDTO.Type,
+            };
             if (projector == null)
             {
                 return HttpNotFound();
@@ -82,8 +112,13 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(projector).State = EntityState.Modified;
-                db.SaveChanges();
+                projectorService.Edit(new ProjectorDTO
+                {
+                    Id = projector.Id,
+                    Name = projector.Name,
+                    Resolution = projector.Resolution,
+                    Type = projector.Type,
+                });
                 return RedirectToAction("Index");
             }
             return View(projector);
@@ -96,12 +131,19 @@ namespace PresentationForYou.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Projector projector = db.Projectors.Find(id);
-            if (projector == null)
+            ProjectorDTO projectorDTO = projectorService.Get(id);
+            Projector projector = new Projector()
+            {
+                Id = projectorDTO.Id,
+                Name = projectorDTO.Name,
+                Resolution = projectorDTO.Resolution,
+                Type = projectorDTO.Type,
+            };
+            if (projectorDTO == null)
             {
                 return HttpNotFound();
             }
-            return View(projector);
+            return View(projectorDTO);
         }
 
         // POST: Projectors/Delete/5
@@ -109,9 +151,7 @@ namespace PresentationForYou.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Projector projector = db.Projectors.Find(id);
-            db.Projectors.Remove(projector);
-            db.SaveChanges();
+            projectorService.Remove(id);
             return RedirectToAction("Index");
         }
 
@@ -119,7 +159,7 @@ namespace PresentationForYou.WEB.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                projectorService.Dispose();
             }
             base.Dispose(disposing);
         }

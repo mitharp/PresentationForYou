@@ -29,7 +29,7 @@ namespace PresentationForYou.DAL.Repositories
 
         public IEnumerable<Auditory> Find(Func<Auditory, bool> predicate) => db.Auditories.Where(predicate).ToList();
 
-        public IEnumerable<Auditory> Get(int id) => Find(a => a.Id == id);
+        public Auditory Get(int id) => Find(a => a.Id == id).FirstOrDefault();
 
         public IEnumerable<Auditory> GetAll() => db.Auditories;
 

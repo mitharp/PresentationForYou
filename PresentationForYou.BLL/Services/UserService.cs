@@ -40,9 +40,7 @@ namespace PresentationForYou.BLL.Services
             var source = Database.Users.Get(id.Value);
             if (source == null)
                 throw new Exception("Телефон не найден");
-            Mapper.Initialize(item => item.CreateMap<User, UserDTO>());
-            return Mapper.Map<IEnumerable<User>, List<UserDTO>>(source)[0];
-            return new UserDTO { Id = source}
+            return new UserDTO { Id = source.Id }
         }
         public IEnumerable<UserDTO> GetAll()
         {

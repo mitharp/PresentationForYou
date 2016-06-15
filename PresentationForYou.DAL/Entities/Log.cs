@@ -2,7 +2,7 @@
 
 namespace PresentationForYou.DAL.Entities
 {
-    class Log
+    public class Log
     {
         public int Id { get; set; }
         public DateTime BeginningDatetime { get; set; }

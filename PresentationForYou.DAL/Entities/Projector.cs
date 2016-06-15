@@ -1,6 +1,6 @@
 ﻿namespace PresentationForYou.DAL.Entities
 {
-    class Projector
+    public class Projector
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -2,7 +2,7 @@
 
 namespace PresentationForYou.DAL.Entities
 {
-    class Request
+    public class Request
     {
         public int Id { get; set; }
         public DateTime BeginningDatetime { get; set; }

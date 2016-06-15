@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\AccountDTO.cs" />
-    <Compile Include="DTO\SourceDTO.cs" />
-    <Compile Include="DTO\TransactionDTO.cs" />
+    <Compile Include="DTO\AuditoryDTO.cs" />
+    <Compile Include="DTO\BoardDTO.cs" />
+    <Compile Include="DTO\LogDTO.cs" />
+    <Compile Include="DTO\ProjectorDTO.cs" />
+    <Compile Include="DTO\RequestDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="Infrastructure\ServiceModule.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

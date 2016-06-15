@@ -12,9 +12,9 @@ namespace PresentationForYou.DAL.Entities
         public int UserId { get; set; }
         public bool IsAccepted { get; set; }
 
-        public virtual User User { get; set; }
-        public virtual Auditory Auditory { get; set; }
-        public virtual Projector Projector { get; set; }
-        public virtual Board Board { get; set; }
+        public User User { get; set; }
+        public Auditory Auditory { get; set; }
+        public Projector Projector { get; set; }
+        public Board Board { get; set; }
     }
 }

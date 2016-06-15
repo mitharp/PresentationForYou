@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="ff490212-c7cd-475b-b627-1c920f9662e9" />
+  <nestedChildShapes>
+    <actorShape Id="0110be1e-58fa-40eb-b403-20c8b17a2fa1" absoluteBounds="0.625, 2.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="6f59a4a1-8b94-45a3-80e6-ae83f9401b09" LastKnownName="Користувач" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="f7ef5ff7-daa5-4953-af83-7c9168757e21" absoluteBounds="10.625, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="472dccca-23dd-488c-a458-5a938a58b5df" LastKnownName="Менеджер" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="fbd31b13-4251-45d1-b7e3-7620d78e48bc" absoluteBounds="10.625, 5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="61c89bf2-d968-4a03-955d-50acdcfbb4ef" LastKnownName="Адміністратор" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="967a5e65-5e7c-48b6-922e-452fb08b3eca" absoluteBounds="7, 0.75, 2.875, 2.5" customColor="White">
+      <subsystemMoniker Id="b591f789-5da3-4ce7-8657-9fffd217c8ac" LastKnownName="Керування ресурсами" />
+      <nestedChildShapes>
+        <useCaseShape Id="ff20dca5-8398-4741-be53-ae111837e865" absoluteBounds="7.375, 2.25, 1.375, 0.875" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="9ad3ef80-0a19-4a66-bbd5-99410cedc93a" LastKnownName="Бронювання дошок, проекторів, аудиторій" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="da6fcb55-61c0-46f4-81d1-f1c9492f08ef" absoluteBounds="7.125, 1.25, 1.375, 0.75" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="25e0e068-958e-42eb-b069-da5dd3c79b7d" LastKnownName="Додавання та видалення ресурсів" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(10.625 : 1.71944444444444); (8.65367588081299 : 2.46416688947065)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="317b1982-f093-47c6-b04c-c58629e3766b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="f7ef5ff7-daa5-4953-af83-7c9168757e21" />
+        <useCaseShapeMoniker Id="ff20dca5-8398-4741-be53-ae111837e865" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(10.625 : 1.625); (8.5 : 1.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="a416ea2c-763a-40c2-af79-92d60ffb3518" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="f7ef5ff7-daa5-4953-af83-7c9168757e21" />
+        <useCaseShapeMoniker Id="da6fcb55-61c0-46f4-81d1-f1c9492f08ef" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="916c708b-db91-4ac8-bb7b-5f509ac0d45d" absoluteBounds="7, 3.5, 2.875, 2.25" customColor="White">
+      <subsystemMoniker Id="8b78c25a-f7de-440c-ab75-787c81dd108f" LastKnownName="Керування аккаунтами" />
+      <nestedChildShapes>
+        <useCaseShape Id="8591cd8e-72b0-4fa2-8b8d-4fe3cf04cd64" absoluteBounds="7.875, 4.875, 1.625, 0.75" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="ec2bd86d-d904-4411-8122-bd92de178aae" LastKnownName="Додавання та видалення аккаунтів" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="347dc11e-942e-4aa6-9852-374585aa4415" absoluteBounds="7.125, 4, 1.25, 0.875" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="34c8c4be-49ba-43a3-a144-d6ba1a31ced1" LastKnownName="Призначення додаткових ролей" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(10.625 : 5.185); (8.3358907950061 : 4.58983160670159)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="c28a8119-b518-4510-bff5-0f3884b1cd86" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fbd31b13-4251-45d1-b7e3-7620d78e48bc" />
+        <useCaseShapeMoniker Id="347dc11e-942e-4aa6-9852-374585aa4415" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(10.625 : 5.25); (9.5 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="04654db9-23de-481d-9a22-d35ba1692e7d" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fbd31b13-4251-45d1-b7e3-7620d78e48bc" />
+        <useCaseShapeMoniker Id="8591cd8e-72b0-4fa2-8b8d-4fe3cf04cd64" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="096c1f99-132a-42f2-9630-b8a44eed51a1" absoluteBounds="1.5, 0.75, 5, 5" customColor="White">
+      <subsystemMoniker Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" LastKnownName="Підсистема користувача" />
+      <nestedChildShapes>
+        <useCaseShape Id="b6a6a651-4fcd-49a8-977a-fa8d0db69dcc" absoluteBounds="4.25, 4.125, 1.5, 0.875" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="d9a3a075-3ad7-4510-aa2d-0d09d4f1ca24" LastKnownName="Перегляд зайнятості дошок, проекторів, аудиторій" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="73b133d2-9b9e-4c2f-974d-66bded767cbd" absoluteBounds="2.125, 4.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="c089ee6b-1ef7-4c46-ab63-db17dabb8988" LastKnownName="Реєстрація в системі" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="8f407077-0fac-41f4-9d87-6883f0699a6d" absoluteBounds="4.5, 1.125, 1.375, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="63efea38-85cd-4807-b333-c02a4412def3" LastKnownName="Запит на бронювання ресурсу" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="1e2c1f8e-8ff6-4df9-8039-07671590fd68" absoluteBounds="2.5, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="cd3a2c9f-0e31-4113-b83b-249f9e924891" LastKnownName="Авторизація" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseDependencyConnector edgePoints="[(6.5 : 2.54577464788732); (7 : 2.40492957746479)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="67eaf5ec-b734-49c0-ac91-f2ef145254f4" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="096c1f99-132a-42f2-9630-b8a44eed51a1" />
+        <SubsystemShapeMoniker Id="967a5e65-5e7c-48b6-922e-452fb08b3eca" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseDependencyConnector edgePoints="[(6.5 : 4.02464788732394); (7 : 4.17957746478873)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="3b468c83-f543-46c5-af07-fe96649da789" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="096c1f99-132a-42f2-9630-b8a44eed51a1" />
+        <SubsystemShapeMoniker Id="916c708b-db91-4ac8-bb7b-5f509ac0d45d" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <extendConnector edgePoints="[(4.65513338217892 : 1.63523617233354); (3.40137192397723 : 2.1009189996656)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="95176e53-0587-42b1-8d58-40a42d483d02" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallySized="true" manuallyPlaced="true" absoluteBounds="3.4203432373568017, 1.5625000000000004, 0.592731809034531, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <useCaseShapeMoniker Id="8f407077-0fac-41f4-9d87-6883f0699a6d" />
+        <useCaseShapeMoniker Id="1e2c1f8e-8ff6-4df9-8039-07671590fd68" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(4.66217896595263 : 4.17189442938273); (3.19845557534273 : 2.47946425899004)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="b0df8641-84e5-463e-bf1f-e213a55e93fb" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="b6a6a651-4fcd-49a8-977a-fa8d0db69dcc" />
+        <useCaseShapeMoniker Id="1e2c1f8e-8ff6-4df9-8039-07671590fd68" />
+      </nodes>
+    </extendConnector>
+    <includeConnector edgePoints="[(2.96437647500605 : 2.49936467495768); (2.66062352499395 : 4.62563532504232)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="83ab0d65-deeb-42cf-a38d-7d52bfb3872b" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="1e2c1f8e-8ff6-4df9-8039-07671590fd68" />
+        <useCaseShapeMoniker Id="73b133d2-9b9e-4c2f-974d-66bded767cbd" />
+      </nodes>
+    </includeConnector>
+    <useCaseAssociationConnector edgePoints="[(1.09375 : 3.125); (2.42459058299015 : 4.64596066627445)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="6922ead3-6181-4b96-ab47-29a304012d33" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="0110be1e-58fa-40eb-b403-20c8b17a2fa1" />
+        <useCaseShapeMoniker Id="73b133d2-9b9e-4c2f-974d-66bded767cbd" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(1.125 : 2.80147058823529); (2.56903289242112 : 2.37675503164085)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="71d23fb3-3047-4ab6-b25f-9a8df0e3525a" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="0110be1e-58fa-40eb-b403-20c8b17a2fa1" />
+        <useCaseShapeMoniker Id="1e2c1f8e-8ff6-4df9-8039-07671590fd68" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

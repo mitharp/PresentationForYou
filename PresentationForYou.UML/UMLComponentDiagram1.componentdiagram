@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="61998ba6-4cc6-473e-b6a9-3e2dba2fcf38" name="UMLComponentDiagram1" linkedPackageId="ffffe94e-7557-4746-9aca-e39f8600bfe6" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="2328fde3-41ca-46c2-8904-5b04fc78e4b3">
+      <profileInstance Id="112db5d2-a02e-44b7-8df4-f223b6ca5542" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="91814f8c-befa-4302-a2e6-5487c12b7864">
+      <profileInstance Id="1b8ad4a3-d75a-4e4d-b384-a84184f15267" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2e2cde73-1d77-44c2-8911-ca0a504a4781">
+      <profileInstance Id="857170b7-839e-483e-a260-3f0c4f5beb6e" name="TextTemplateBindings">
+        <elementDefinition Id="fc3cf6ed-25e2-4be6-ac2a-c525c23b7302" />
+      </profileInstance>
+      <elementDefinition Id="ebcd47ca-4d6d-40f7-a810-fcdad162468b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="f74afac4-5244-4092-940e-3d71d671295d" name="Auditory.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c0d0a892-06c7-458b-9993-07848070781b" />
+        <suppliersInternal>
+          <dependency Id="644d626a-ca5c-4be0-a6b4-6da2b50c5f72">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="331e48d4-15cd-4276-a7c5-69c508f0f0b3" />
+          </dependency>
+          <dependency Id="225e9252-ae18-4fd0-a1dd-6f75bc7fcff5">
+            <componentMoniker Id="f5140f9a-4ce8-4e4b-8abb-02daabe46ba1" LastKnownName="Auditory.cshtml" />
+            <elementDefinition Id="b53ecd86-364e-4973-9c9d-a2b614da4932" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b6ad54b0-2b81-4231-86ce-67c4e2bfdeb4" name="Board.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b2e97fc2-f418-4b03-af37-a87a81ef4408" />
+        <suppliersInternal>
+          <dependency Id="79d91486-46d1-4ea1-ae78-de0d4f3e9f6e">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="190771c8-10e7-4e61-aee6-7dc881053a06" />
+          </dependency>
+          <dependency Id="83704221-2df1-4529-803a-16898299c332">
+            <componentMoniker Id="a7deae96-5ef2-4e48-9316-a5e588157f78" LastKnownName="Board.cshtml" />
+            <elementDefinition Id="1c843a55-ce89-4aaf-871c-28e4007857bb" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="ab269599-17bf-4ad5-a973-c8d7fd33398e" name="Log.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e261392-c25d-4a7c-afc6-9c9d0b7bba97" />
+        <suppliersInternal>
+          <dependency Id="7c3d1206-192c-42f2-a941-e898964f87b7">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="8c152ef4-6e29-46fc-8726-d19ab5b3ad72" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1846524a-329e-42de-91e7-bb84196b6e14" name="PresentationDB" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c0f95e59-2971-46b0-9ddf-3ab4f5d3925b" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a20ea553-78b1-43bc-8697-f5985814fc37" name="Projector.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd05a1b4-10b1-46b1-af6a-0b6435dc635e" />
+        <suppliersInternal>
+          <dependency Id="4bbc25b3-2e5d-4e98-9719-b13280b6f6f4">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="0aa6e800-2a77-407e-b3c6-dbe47772e94e" />
+          </dependency>
+          <dependency Id="409ceab6-1bfb-4805-a4cc-640a18eebc18">
+            <componentMoniker Id="6c02a0fb-be28-4003-9ea8-fc37e635f36f" LastKnownName="Projector.cshtml" />
+            <elementDefinition Id="2265fee0-e61d-44ce-8b6c-4fcd5b910bba" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2db1f7ae-9277-4446-8648-6c625bbf928e" name="User.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c27e2e0a-e4e1-4b96-83f9-0de2af6c4c42" />
+        <suppliersInternal>
+          <dependency Id="173c025f-e7f4-4083-a6fd-128379e57d76">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="902c6d58-80d6-4564-ab3a-79fe3385681d" />
+          </dependency>
+          <dependency Id="c69fd7af-ddc5-4443-8402-5b8d763c893f">
+            <componentMoniker Id="e5d33061-026b-4695-a0cd-2d34217ad423" LastKnownName="LogIn.cshtml" />
+            <elementDefinition Id="85850ad6-875c-430b-89e1-ecfbb6716a2b" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="9cfd8890-fb2b-47a0-97d3-ef13a5175dbb" name="Request.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2e89bba6-69df-4535-bf82-2b4a0d1506b6" />
+        <suppliersInternal>
+          <dependency Id="f0351b56-5de0-4f44-ad6a-d3d77e315f6b">
+            <componentMoniker Id="1846524a-329e-42de-91e7-bb84196b6e14" LastKnownName="PresentationDB" />
+            <elementDefinition Id="351d7bcb-2ab4-4b64-8465-84a391f9c6cb" />
+          </dependency>
+          <dependency Id="34c22e99-a936-46bc-b758-93a9c7d60443">
+            <componentMoniker Id="1cd4c4ef-4cb4-40d1-99f1-2359c4f10bc7" LastKnownName="Request.cshtml" />
+            <elementDefinition Id="ee45ec41-d2e3-4cf6-9fca-870df30b8f7d" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="6f79bac0-5960-42c6-be30-9da117cdc204" name="HomeController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="344fb91d-6d73-41bb-a961-a09049db7c7c" />
+        <generalsInternal>
+          <generalization Id="e59c435e-57b8-4ef9-80a7-a94a78770ec4" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="4ec839f9-cd2e-431b-a878-3b993df39098" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2cdf7d6e-cd95-49ca-b9f1-f7fb48937f26" name="AuditoryController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f833ddd4-a2b7-4dab-b94d-01f4cbd6fdfd" />
+        <suppliersInternal>
+          <dependency Id="0f59b3e4-9b2a-4266-9f7e-e078ef3173cd">
+            <componentMoniker Id="f74afac4-5244-4092-940e-3d71d671295d" LastKnownName="Auditory.cs" />
+            <elementDefinition Id="72d37143-2520-4912-bd04-d16ced34eae5" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="8ab5b6c4-3a5b-45c2-824d-781dc82b03c6" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="65c3f096-30ca-4132-a25a-7a47fac9c876" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f3cecc13-e70c-4882-b349-918b8b757872" name="UserController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9463857c-4d43-4124-b3db-d737b10c1b7a" />
+        <suppliersInternal>
+          <dependency Id="cda794f7-18dc-41c9-a669-43ae4f39d96a">
+            <componentMoniker Id="9cfd8890-fb2b-47a0-97d3-ef13a5175dbb" LastKnownName="Request.cs" />
+            <elementDefinition Id="0d0da695-d858-4e45-af60-9b67c39bbf9a" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="5f7e842c-b9d8-43ff-8f24-bda124cd6653" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="62504370-6975-425a-8f8f-14aed0d35249" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="293922b5-6aac-40b6-b46f-2878e183219c" name="BoardController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="98e97ec4-8f62-41c2-8a67-b7011e14ccab" />
+        <suppliersInternal>
+          <dependency Id="a017d3f9-aef0-48be-98b5-9461ed212f65">
+            <componentMoniker Id="b6ad54b0-2b81-4231-86ce-67c4e2bfdeb4" LastKnownName="Board.cs" />
+            <elementDefinition Id="9a09b1b5-fc98-418a-978b-35552d9d5f40" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="9aad6766-6655-4df9-ad62-1a04bedd687c" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="d5d24b59-c453-45d0-a791-746734a54fad" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="84b118b5-94b0-4d0a-aeb7-3864479b7a82" name="ProjectorController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="950e635f-4bbd-4321-9d19-17ab848ca0c3" />
+        <suppliersInternal>
+          <dependency Id="d34936c5-68f9-4477-8ef0-7468a5861c2b">
+            <componentMoniker Id="a20ea553-78b1-43bc-8697-f5985814fc37" LastKnownName="Projector.cs" />
+            <elementDefinition Id="ba199651-df90-4abe-bff4-cdea71429d78" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="3e2a0f63-50c9-4e76-86e4-ba12d7b2a555" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="0cbf116e-ae42-4450-b2e6-99c5efa7510c" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2cc973ac-4246-453b-b9a5-4d5003a02053" name="LoginController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ab9b1713-2125-4bae-b451-4a912052d221" />
+        <generalsInternal>
+          <generalization Id="04933e08-9e57-454c-a645-eb4408b68250" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="0d25e26d-fcb1-4c7b-8f0b-48d42d9f210b" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b0737860-73d7-4028-ab6e-da6506779120" name="SignInController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e617520b-7280-4381-9e52-5cfceeae8534" />
+        <suppliersInternal>
+          <dependency Id="f48e28ab-9753-45d4-843b-8cb3a9754b2f">
+            <componentMoniker Id="2db1f7ae-9277-4446-8648-6c625bbf928e" LastKnownName="User.cs" />
+            <elementDefinition Id="88ae466f-9e52-49fc-b3ef-eae7c8d37f6e" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="390b2787-46fb-4dd3-8c18-b54eceb978e1" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="fa026a80-2bf0-4194-ac27-273e832a6d7d" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="bdcfffba-5e5e-48b2-a9b9-c2e13e43ebf3" name="AdminController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7a4b9d3d-f3ab-48af-9774-b6211ebbbf0d" />
+        <suppliersInternal>
+          <dependency Id="8d4209cd-36c6-4fe9-9947-729d99367e7d">
+            <componentMoniker Id="2db1f7ae-9277-4446-8648-6c625bbf928e" LastKnownName="User.cs" />
+            <elementDefinition Id="fcfac599-0271-4508-9d90-651973120874" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="22480a06-99e0-4e17-a3db-ad9be29986cb" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="69a97fc7-925c-4d48-91de-3353e84a2509" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b16350fb-fa59-473d-8a17-958201caa401" name="ManagerController.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c5ae2957-899c-4606-b27a-bb51f78b9abc" />
+        <suppliersInternal>
+          <dependency Id="014bdaf4-7407-4714-adcb-24a7f9748cac">
+            <componentMoniker Id="ab269599-17bf-4ad5-a973-c8d7fd33398e" LastKnownName="Log.cs" />
+            <elementDefinition Id="f63a5536-937e-4488-871d-1df5482075a6" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="1419c77d-a75c-4191-90d8-eca7a3c37f96" isSubstitutable="false">
+            <componentMoniker Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" LastKnownName="System.Web.Mvc.Controller" />
+            <elementDefinition Id="91f749d4-3efc-408e-b864-6d4358754cdb" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e6ac4722-c74c-4d75-963b-286a9f7c367b" name="System.Web.Mvc.Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="33fb8eb6-de44-42a3-9738-8837e77c4cb2" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4e2c2539-987d-4998-b387-1388ecad184a" name="Index.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d4feaa4-3a52-4b1f-85e6-4278c2ca91fc" />
+        <suppliersInternal>
+          <dependency Id="c554ca48-a107-45fb-827f-3ed4d765f218">
+            <componentMoniker Id="6f79bac0-5960-42c6-be30-9da117cdc204" LastKnownName="HomeController.cs" />
+            <elementDefinition Id="6153fc75-4b34-4a4e-87fa-7683064060b8" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f5140f9a-4ce8-4e4b-8abb-02daabe46ba1" name="Auditory.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3e2d95d1-cd3e-40e8-b515-46b692c43252" />
+        <suppliersInternal>
+          <dependency Id="47aa4782-a23c-4ed5-826a-4553ced4441c">
+            <componentMoniker Id="2cdf7d6e-cd95-49ca-b9f1-f7fb48937f26" LastKnownName="AuditoryController.cs" />
+            <elementDefinition Id="2c884be9-a0b7-47fc-85a0-481aa4e6f440" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a7deae96-5ef2-4e48-9316-a5e588157f78" name="Board.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5908b92e-7791-4399-ae08-a76fc6c3665f" />
+        <suppliersInternal>
+          <dependency Id="40ae6af6-b308-4586-b164-3e231b2bc499">
+            <componentMoniker Id="293922b5-6aac-40b6-b46f-2878e183219c" LastKnownName="BoardController.cs" />
+            <elementDefinition Id="59a2830c-452a-4305-b3fc-6b47e196e501" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="6c02a0fb-be28-4003-9ea8-fc37e635f36f" name="Projector.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1659f717-85e0-46ec-ab38-c698f8c0b5fb" />
+        <suppliersInternal>
+          <dependency Id="36b24421-e078-48f4-9542-9f6ae3024659">
+            <componentMoniker Id="84b118b5-94b0-4d0a-aeb7-3864479b7a82" LastKnownName="ProjectorController.cs" />
+            <elementDefinition Id="91f0a2ae-456d-4fa6-b189-a9ac98b8c341" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="28e68a0c-1a23-44b2-a893-9c251322be2d" name="SignIn.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f1b742db-362c-4636-9a49-f24185937a34" />
+        <suppliersInternal>
+          <dependency Id="64c20322-3cb3-492d-b539-3f8d19d99ef2">
+            <componentMoniker Id="b0737860-73d7-4028-ab6e-da6506779120" LastKnownName="SignInController.cs" />
+            <elementDefinition Id="1da24a96-47d5-4913-8518-652bbf68b7a6" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e5d33061-026b-4695-a0cd-2d34217ad423" name="LogIn.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a3adcf5f-189a-40f7-b34d-74ab7455a4d6" />
+        <suppliersInternal>
+          <dependency Id="15a2484e-08d2-4df0-b8d6-86286338e3b4">
+            <componentMoniker Id="6f79bac0-5960-42c6-be30-9da117cdc204" LastKnownName="HomeController.cs" />
+            <elementDefinition Id="2f30cb4c-3420-4ae6-88e7-1754f60eaa3d" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1cd4c4ef-4cb4-40d1-99f1-2359c4f10bc7" name="Request.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="016237dc-2754-484e-b7a1-76217ab0fff2" />
+        <suppliersInternal>
+          <dependency Id="dd20bd68-f576-4a1e-9f8d-274d227ce6c3">
+            <componentMoniker Id="f3cecc13-e70c-4882-b349-918b8b757872" LastKnownName="UserController.cs" />
+            <elementDefinition Id="cfe2e38a-e6da-4316-949b-cd626c5b4e6b" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="3874960c-0526-4542-9769-55a3ecaf333e" name="Admin.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="42beff91-62c8-4a10-a8bf-219810540507" />
+        <suppliersInternal>
+          <dependency Id="9ddbf859-8dfb-426b-95a5-51256d867a4b">
+            <componentMoniker Id="bdcfffba-5e5e-48b2-a9b9-c2e13e43ebf3" LastKnownName="AdminController.cs" />
+            <elementDefinition Id="cf8b470b-b4e4-4e70-bff1-0c749e3df9d4" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2dc43fc0-0f91-4325-9a13-f89a93862c15" name="Manager.cshtml" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a75e951-73cc-4074-bd86-26d46d6e7d70" />
+        <suppliersInternal>
+          <dependency Id="b52cf37d-f7fc-4353-9665-37089547f8c1">
+            <componentMoniker Id="b16350fb-fa59-473d-8a17-958201caa401" LastKnownName="ManagerController.cs" />
+            <elementDefinition Id="b6515322-f94d-41a4-8eee-eb8cb8081f5f" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="ffffe94e-7557-4746-9aca-e39f8600bfe6" name="PresentationForYou">
+    <elementDefinition Id="49748a3f-a0ce-4767-9e59-1a3a85b6fdc4" />
+  </package>
+</componentModel>

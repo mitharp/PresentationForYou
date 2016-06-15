@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="ff490212-c7cd-475b-b627-1c920f9662e9" name="UMLUseCaseDiagram1" linkedPackageId="deb7d32f-c9f2-4746-a928-9979bcc1768e" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <description>Гоп-ца-ца</description>
+  <profileInstances>
+    <packageHasProfileInstances Id="a9450345-f17c-42a6-a706-f5fa3e9714c3">
+      <profileInstance Id="b332ff11-83d1-48ba-97a3-a51d1d24b1af" name="TextTemplateBindings">
+        <elementDefinition Id="fc3cf6ed-25e2-4be6-ac2a-c525c23b7302" />
+      </profileInstance>
+      <elementDefinition Id="ebcd47ca-4d6d-40f7-a810-fcdad162468b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6f59a4a1-8b94-45a3-80e6-ae83f9401b09" name="Користувач" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b034851f-b87c-4162-a492-680a40e45d72" />
+        <targetEnds>
+          <association Id="6922ead3-6181-4b96-ab47-29a304012d33" isDerived="false" sourceEndRoleName="Користувач" targetEndRoleName="Реєстрація в системі" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c089ee6b-1ef7-4c46-ab63-db17dabb8988" LastKnownName="Реєстрація в системі" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ca39c46-cb30-4e12-9e90-a4a8d512884d" name="Користувач" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7eb3eed7-684c-49e3-9681-5d88cb9d5f08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8181e064-8c90-4603-81ae-caa3343f9a61" name="Реєстрація в системі" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e4b0660-084f-46d7-8c84-7ce90e9b131a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b535059a-05e7-4203-9f8f-59209f4884f5" />
+          </association>
+          <association Id="71d23fb3-3047-4ab6-b25f-9a8df0e3525a" isDerived="false" sourceEndRoleName="Користувач" targetEndRoleName="Авторизація" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cd3a2c9f-0e31-4113-b83b-249f9e924891" LastKnownName="Авторизація" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f07b4bc8-1860-4db4-b0c6-c97d92b7dbea" name="Користувач" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b67d39fa-65e1-4c6d-a9f6-691cffb32149" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f23a885-2a62-4697-a043-4fdeb75b6972" name="Авторизація" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2007e46c-47ef-4840-86c4-08a3b0840613" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3b9aa049-2db4-470d-a1a9-71d7ee5cb11e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="472dccca-23dd-488c-a458-5a938a58b5df" name="Менеджер" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bde6ddaf-634d-4b6f-84f7-0db265d20a04" />
+        <targetEnds>
+          <association Id="317b1982-f093-47c6-b04c-c58629e3766b" isDerived="false" sourceEndRoleName="Менеджер" targetEndRoleName="Бронювання дошок, проекторів, аудиторій" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9ad3ef80-0a19-4a66-bbd5-99410cedc93a" LastKnownName="Бронювання дошок, проекторів, аудиторій" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9caed31f-27b7-43c4-87a1-498fd22aeaf9" name="Менеджер" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ab23a06e-aa43-47af-ac21-ea2e4f8f2637" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="753e47c0-c050-4bb5-8bb6-bae00590c6ce" name="Бронювання дошок, проекторів, аудиторій" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5feb53b9-7e76-413d-88df-fe3fbd15c878" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="667f9138-e7a6-49a3-9c5f-a762094fad87" />
+          </association>
+          <association Id="a416ea2c-763a-40c2-af79-92d60ffb3518" isDerived="false" sourceEndRoleName="Менеджер" targetEndRoleName="Додавання та видалення ресурсів" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="25e0e068-958e-42eb-b069-da5dd3c79b7d" LastKnownName="Додавання та видалення ресурсів" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb9f0df1-ed7c-4f07-b380-df71df950438" name="Менеджер" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00e9c0ca-0fb2-45ba-ba19-9e24ca07f1a2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7475d772-3a2d-4ac4-94e4-0949108cb323" name="Додавання та видалення ресурсів" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7b7dca80-0406-4404-8f7b-2c3985ba3e83" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dca96703-71aa-4633-9369-bceddb456a5c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="61c89bf2-d968-4a03-955d-50acdcfbb4ef" name="Адміністратор" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a28f926f-14e8-4baf-af08-0bfa4108a2b5" />
+        <targetEnds>
+          <association Id="c28a8119-b518-4510-bff5-0f3884b1cd86" isDerived="false" sourceEndRoleName="Адміністратор" targetEndRoleName="Призначення додаткових ролей" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="34c8c4be-49ba-43a3-a144-d6ba1a31ced1" LastKnownName="Призначення додаткових ролей" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d131d4c7-adb7-48b4-8b1c-9b1f6f44216f" name="Адміністратор" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a877ecf2-7b51-4970-840e-e0d886a0908b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66878644-580a-4654-b960-bf40b3cac2c2" name="Призначення додаткових ролей" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e9dba920-c5cf-4c94-a144-7a558ccc9346" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d9fc8435-df8e-4e4f-be28-a409c1eb358f" />
+          </association>
+          <association Id="04654db9-23de-481d-9a22-d35ba1692e7d" isDerived="false" sourceEndRoleName="Адміністратор" targetEndRoleName="Додавання та видалення аккаунтів" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ec2bd86d-d904-4411-8122-bd92de178aae" LastKnownName="Додавання та видалення аккаунтів" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b76d7065-cf83-4876-9b58-16ef00c117a4" name="Адміністратор" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="421f4579-d85a-4396-a286-bc8a73c0a14d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66af5123-6b9b-429c-a589-95d807c54c79" name="Додавання та видалення аккаунтів" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cc394ac7-f94c-4161-8d2a-187a2b5d1245" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07be07ab-5601-4da7-bac5-ce05d57d8bcc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b591f789-5da3-4ce7-8657-9fffd217c8ac" name="Керування ресурсами" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a4b605bd-4256-4fa9-8b17-03b341300ac8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9ad3ef80-0a19-4a66-bbd5-99410cedc93a" name="Бронювання дошок, проекторів, аудиторій" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="54ac3fdc-7680-46c4-b291-f559b80cd92c" />
+        <subjects>
+          <subsystemMoniker Id="b591f789-5da3-4ce7-8657-9fffd217c8ac" LastKnownName="Керування ресурсами" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="25e0e068-958e-42eb-b069-da5dd3c79b7d" name="Додавання та видалення ресурсів" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0aeb2e4b-5f3a-4849-b7c3-4e4a430fd2a6" />
+        <subjects>
+          <subsystemMoniker Id="b591f789-5da3-4ce7-8657-9fffd217c8ac" LastKnownName="Керування ресурсами" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="8b78c25a-f7de-440c-ab75-787c81dd108f" name="Керування аккаунтами" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dc64120b-7a4c-453b-88c7-0106cb7fa8c9" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="ec2bd86d-d904-4411-8122-bd92de178aae" name="Додавання та видалення аккаунтів" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="911172ae-fa5e-48c9-9b12-3b06946257f1" />
+        <subjects>
+          <subsystemMoniker Id="8b78c25a-f7de-440c-ab75-787c81dd108f" LastKnownName="Керування аккаунтами" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="34c8c4be-49ba-43a3-a144-d6ba1a31ced1" name="Призначення додаткових ролей" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="66e64a1a-1e00-4848-b469-fc4250df8757" />
+        <subjects>
+          <subsystemMoniker Id="8b78c25a-f7de-440c-ab75-787c81dd108f" LastKnownName="Керування аккаунтами" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" name="Підсистема користувача" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e7f7517a-d50b-4c96-803a-d1569c359bc4" />
+        <suppliersInternal>
+          <dependency Id="67eaf5ec-b734-49c0-ac91-f2ef145254f4">
+            <subsystemMoniker Id="b591f789-5da3-4ce7-8657-9fffd217c8ac" LastKnownName="Керування ресурсами" />
+            <elementDefinition Id="9528ce02-b7dc-4ff0-bbe3-4f13efbbeaf7" />
+          </dependency>
+          <dependency Id="3b468c83-f543-46c5-af07-fe96649da789">
+            <subsystemMoniker Id="8b78c25a-f7de-440c-ab75-787c81dd108f" LastKnownName="Керування аккаунтами" />
+            <elementDefinition Id="706b4897-9f69-4f74-863b-cb0067546ab1" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="d9a3a075-3ad7-4510-aa2d-0d09d4f1ca24" name="Перегляд зайнятості дошок, проекторів, аудиторій" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="600acfaf-e123-4aac-b213-2a8b881f798f" />
+        <extendedCases>
+          <extend Id="b0df8641-84e5-463e-bf1f-e213a55e93fb">
+            <useCaseMoniker Id="cd3a2c9f-0e31-4113-b83b-249f9e924891" LastKnownName="Авторизація" />
+            <elementDefinition Id="7d7756cf-1e1b-496f-bc8a-e8a3828f5665" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" LastKnownName="Підсистема користувача" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c089ee6b-1ef7-4c46-ab63-db17dabb8988" name="Реєстрація в системі" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd19676c-0dfa-4065-9b5f-04e5649e3861" />
+        <subjects>
+          <subsystemMoniker Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" LastKnownName="Підсистема користувача" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="63efea38-85cd-4807-b333-c02a4412def3" name="Запит на бронювання ресурсу" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="31119b24-ea99-4402-b56b-f1639e5c94a4" />
+        <extendedCases>
+          <extend Id="95176e53-0587-42b1-8d58-40a42d483d02">
+            <useCaseMoniker Id="cd3a2c9f-0e31-4113-b83b-249f9e924891" LastKnownName="Авторизація" />
+            <elementDefinition Id="e54b7a56-de4a-4262-b520-e209a4c9a97f" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" LastKnownName="Підсистема користувача" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="cd3a2c9f-0e31-4113-b83b-249f9e924891" name="Авторизація" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="665c1d94-7970-42cd-8e78-5bd7ff3a9086" />
+        <additions>
+          <include Id="83ab0d65-deeb-42cf-a38d-7d52bfb3872b">
+            <useCaseMoniker Id="c089ee6b-1ef7-4c46-ab63-db17dabb8988" LastKnownName="Реєстрація в системі" />
+            <elementDefinition Id="b500fd56-f81d-4e84-89dd-3103a56de88b" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="8827491c-09a9-4f0f-9548-d10f19cbb53a" LastKnownName="Підсистема користувача" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="deb7d32f-c9f2-4746-a928-9979bcc1768e" name="PresentationForYou">
+    <elementDefinition Id="49748a3f-a0ce-4767-9e59-1a3a85b6fdc4" />
+    <profileInstances>
+      <packageHasProfileInstances Id="945db422-aea6-449b-bab0-3507db813459">
+        <profileInstance Id="39215c54-d54f-43bd-a743-755a2fed46f1" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ae405eb9-d190-4bd7-b3ab-38997f4eadb6">
+        <profileInstance Id="b34c819a-d5c2-4668-9c5b-cc0304d16360" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

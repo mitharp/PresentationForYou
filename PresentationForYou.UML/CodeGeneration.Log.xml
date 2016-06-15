@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-06-03T00:43:34" Importance="High" Text="Code generation or text transformation started." />
+  <Error Timestamp="2016-06-03T00:43:35" Importance="High" Text="No templates were found to process.  Configure templates by choosing 'Configure Default Code Generation Settings...' from the 'Architecture' menu, or change the selection for which code generation is launched." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="The selection included 43 elements which were not bound to a template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models' -  (Package): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::Log' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::Request' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::Auditory' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::Board' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::Projector' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Models::User' -  (Class): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Models::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers::' -  (Association): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'f82c135d-7d68-4848-9a97-968ec4334199' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'PresentationForYou::Controllers' -  (Package): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::AuditoryController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::BoardController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::ProjectorController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::AdminController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::SignInController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::ManagerController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::UserController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::Controller' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::HomeController' -  (Class): no bound template." />
+  <Warning Timestamp="2016-06-03T00:43:35" Importance="Medium" Text="'PresentationForYou::Controllers::LogInController' -  (Class): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'b193432c-1f09-4cf3-98ac-0e377c659c98' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'6ce50c1b-5c74-451c-b953-c8b02296937c' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'4e6c81c8-45b7-416b-87b4-4941cb55e35e' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'d0bd9129-e55c-41ef-8e76-4ff13ed79947' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'6913cf00-bce0-4dac-b3c4-ebd8943ae433' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'5a076c8b-3380-4edf-8ddd-b87667f1fc02' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'d42c95c7-d0a9-4df1-92aa-5c6f2dc5f988' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="Diagnostic" Text="'cc72ac4c-042b-4572-b764-1f5d5bea87e7' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-06-03T00:43:35" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 16." />
+</Log>

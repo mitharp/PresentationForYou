@@ -12,8 +12,5 @@ namespace PresentationForYou.DAL.Entities
         public int UserId { get; set; }
 
         public User User { get; set; }
-        public Auditory Auditory { get; set; }
-        public Projector Projector { get; set; }
-        public Board Board { get; set; }
     }
 }

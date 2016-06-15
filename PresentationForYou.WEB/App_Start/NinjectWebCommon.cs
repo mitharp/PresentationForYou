@@ -42,7 +42,7 @@ namespace PresentationForYou.WEB.App_Start
         private static IKernel CreateKernel()
         {
             // устанавливаем строку подключения
-            var modules = new INinjectModule[] { new ServiceModule("BudgetContext") };
+            var modules = new INinjectModule[] { new ServiceModule("PresentationForYouContext") };
             var kernel = new StandardKernel();
             try
             {

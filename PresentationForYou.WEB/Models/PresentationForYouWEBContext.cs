@@ -20,5 +20,7 @@ namespace PresentationForYou.WEB.Models
         }
 
         public System.Data.Entity.DbSet<PresentationForYou.WEB.Models.User> Users { get; set; }
+
+        public System.Data.Entity.DbSet<PresentationForYou.WEB.Models.Auditory> Auditories { get; set; }
     }
 }

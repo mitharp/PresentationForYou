@@ -144,6 +144,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuditoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +216,11 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Auditories\Create.cshtml" />
+    <Content Include="Views\Auditories\Delete.cshtml" />
+    <Content Include="Views\Auditories\Details.cshtml" />
+    <Content Include="Views\Auditories\Edit.cshtml" />
+    <Content Include="Views\Auditories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

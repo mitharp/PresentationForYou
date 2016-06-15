@@ -79,7 +79,21 @@ namespace PresentationForYou.BLL.Services
 
         public IEnumerable<UserDTO> GetAll()
         {
-
+            List<UserDTO> usersDTO = new List<UserDTO>();
+            var users = Database.Users.GetAll();
+            foreach (var user in users)
+                usersDTO.Add(new UserDTO
+                {
+                    Id = user.Id,
+                    BirthDay = user.BirthDay,
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Phone = user.Phone,
+                    RegistrationDateTime = user.RegistrationDateTime,
+                    Role = user.Role
+                });
+            return usersDTO;
         }
     }
 }

@@ -65,6 +65,7 @@ namespace PresentationForYou.WEB.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            System.Web.Mvc.DependencyResolver.SetResolver(new PresentationForYou.WEB.Util.NinjectDependencyResolver(kernel));
+        }
     }
 }

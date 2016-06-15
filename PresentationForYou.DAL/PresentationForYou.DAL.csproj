@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,9 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF\PresentationForYouContext.cs" />
-    <Compile Include="Entities\Account.cs" />
-    <Compile Include="Entities\Source.cs" />
-    <Compile Include="Entities\Transaction.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\Projector.cs" />
+    <Compile Include="Entities\Auditory.cs" />
+    <Compile Include="Entities\Board.cs" />
+    <Compile Include="Entities\Request.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +64,7 @@
     <Compile Include="Repositories\EFUnitOfWork.cs" />
     <Compile Include="Repositories\SourceRepository.cs" />
     <Compile Include="Repositories\TransactionRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

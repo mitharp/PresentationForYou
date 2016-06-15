@@ -5,9 +5,14 @@ namespace PresentationForYou.DAL.EF
 {
     public class PresentationForYouContext : DbContext
     {
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<Source> Sources { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Auditory> Auditories { get; set; }
+        public DbSet<Board> Boards { get; set; }
+        public DbSet<Log> Logs { get; set; }
+        public DbSet<Projector> Projectors { get; set; }
+        public DbSet<Request> Requests { get; set; }
+        public DbSet<User> Users { get; set; }
+
+
         public PresentationForYouContext()
         {
 

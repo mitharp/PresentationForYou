@@ -1,5 +1,6 @@
 ﻿namespace PresentationForYou.BLL.DTO
-    class Auditory
+{
+    public class AuditoryDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

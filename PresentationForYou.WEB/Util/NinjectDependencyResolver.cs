@@ -27,6 +27,9 @@ namespace PresentationForYou.WEB.Util
         private void AddBindings()
         {
             kernel.Bind<IService<UserDTO>>().To<UserService>();
+            kernel.Bind<IService<AuditoryDTO>>().To<AuditoryService>();
+            kernel.Bind<IService<BoardDTO>>().To<BoardService>();
+            kernel.Bind<IService<ProjectorDTO>>().To<ProjectorService>();
         }
     }
 }

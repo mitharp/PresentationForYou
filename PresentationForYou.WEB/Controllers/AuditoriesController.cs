@@ -13,6 +13,10 @@ namespace PresentationForYou.WEB.Controllers
     {
         IService<AuditoryDTO> auditoryService;
         IEnumerable<Auditory> Auditories;
+        public AuditoriesController()
+        {
+
+        }
         public AuditoriesController(IService<AuditoryDTO> auditoryService)
         {
             this.auditoryService = auditoryService;
@@ -29,7 +33,7 @@ namespace PresentationForYou.WEB.Controllers
         // GET: Auditories
         public ActionResult Index()
         {
-            return View(Auditories);
+            return View("Index", Auditories);
         }
 
         // GET: Auditories/Details/5
@@ -57,6 +61,7 @@ namespace PresentationForYou.WEB.Controllers
         // GET: Auditories/Create
         public ActionResult Create()
         {
+            ViewBag.Message = "Hello world!";
             return View();
         }
 

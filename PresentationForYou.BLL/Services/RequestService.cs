@@ -50,7 +50,7 @@ namespace PresentationForYou.BLL.Services
 
         public void Remove(int id)
         {
-            Database.Auditories.Delete(id);
+            Database.Requests.Delete(id);
             Database.Save();
         }
 

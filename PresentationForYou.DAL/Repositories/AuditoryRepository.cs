@@ -4,7 +4,6 @@ using PresentationForYou.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using System.Data.Entity;
 using System.Linq;
 
 namespace PresentationForYou.DAL.Repositories

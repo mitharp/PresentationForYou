@@ -145,11 +145,11 @@ namespace PresentationForYou.WEB.Controllers
                 Type = boardDTO.Type,
                 Width = boardDTO.Width
             };
-            if (boardDTO == null)
+            if (board == null)
             {
                 return HttpNotFound();
             }
-            return View(boardDTO);
+            return View(board);
         }
 
         // POST: Boards/Delete/5

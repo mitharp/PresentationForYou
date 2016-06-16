@@ -139,11 +139,11 @@ namespace PresentationForYou.WEB.Controllers
                 Resolution = projectorDTO.Resolution,
                 Type = projectorDTO.Type,
             };
-            if (projectorDTO == null)
+            if (projector == null)
             {
                 return HttpNotFound();
             }
-            return View(projectorDTO);
+            return View(projector);
         }
 
         // POST: Projectors/Delete/5

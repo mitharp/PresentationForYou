@@ -67,6 +67,11 @@ namespace PresentationForYou.WEB.Controllers
         // GET: Users/Create
         public ActionResult Create()
         {
+            List<SelectListItem> roles = new List<SelectListItem>();
+            roles.Add(new SelectListItem { Text = "Administrator", Value = "Administrator" });
+            roles.Add(new SelectListItem { Text = "Manager", Value = "Manager" });
+            roles.Add(new SelectListItem { Text = "User", Value = "User", Selected = true });
+            ViewBag.roles = roles;
             return View();
         }
 

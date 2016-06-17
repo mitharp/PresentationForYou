@@ -13,6 +13,10 @@ namespace PresentationForYou.WEB.Controllers
     {
         IService<UserDTO> userService;
         IEnumerable<User> Users;
+        public UsersController()
+        {
+
+        }
         public UsersController(IService<UserDTO> userService)
         {
             this.userService = userService;

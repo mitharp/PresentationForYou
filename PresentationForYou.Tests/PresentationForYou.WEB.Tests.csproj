@@ -125,6 +125,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controllers\UsersControllerTest.cs" />
+    <Compile Include="Controllers\ProjectorsControllerTest.cs" />
+    <Compile Include="Controllers\BoardsControllerTest.cs" />
     <Compile Include="Controllers\AuditoriesControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

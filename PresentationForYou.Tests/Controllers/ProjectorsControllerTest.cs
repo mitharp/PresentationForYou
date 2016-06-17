@@ -5,12 +5,12 @@ using System.Web.Mvc;
 namespace PresentationForYou.WEB.Tests.Controllers
 {
     [TestFixture]
-    public class ProjectorsControllerTest
+    public class AuditoriesControllerTest
     {
         [Test]
         public void IndexViewResultNotNull()
         {
-            ProjectorsController controller = new ProjectorsController();
+            AuditoriesController controller = new AuditoriesController();
 
             ViewResult result = controller.Index() as ViewResult;
 
@@ -20,7 +20,7 @@ namespace PresentationForYou.WEB.Tests.Controllers
         [Test]
         public void IndexViewEqualIndexCshtml()
         {
-            ProjectorsController controller = new ProjectorsController();
+            AuditoriesController controller = new AuditoriesController();
 
             ViewResult result = controller.Index() as ViewResult;
 
@@ -30,7 +30,7 @@ namespace PresentationForYou.WEB.Tests.Controllers
         [Test]
         public void IndexStringInViewbag()
         {
-            ProjectorsController controller = new ProjectorsController();
+            AuditoriesController controller = new AuditoriesController();
 
             ViewResult result = controller.Create() as ViewResult;
 

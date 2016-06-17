@@ -13,7 +13,10 @@ namespace PresentationForYou.WEB.Controllers
     {
         IService<ProjectorDTO> projectorService;
         IEnumerable<Projector> Projectors;
+        public ProjectorsController()
+        {
 
+        }
         public ProjectorsController(IService<ProjectorDTO> projectorService)
         {
             this.projectorService = projectorService;

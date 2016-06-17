@@ -13,7 +13,10 @@ namespace PresentationForYou.WEB.Controllers
     {
         IService<BoardDTO> boardService;
         IEnumerable<Board> Boards;
+        public BoardsController()
+        {
 
+        }
         public BoardsController(IService<BoardDTO> boardService)
         {
             this.boardService = boardService;
